@@ -109,7 +109,23 @@
 		</div>
 	</div>
 
-	
+	<div class="gf-form-group" ng-if="!ctrl.isIframe">
+		<h5 class="section-heading">Data (via javascript)</h5>
+		<div class="gf-form-inline">
+			<div class="gf-form gf-form--grow">
+				<code-editor
+					content="ctrl.panel.data_js"
+					on-change="ctrl.updateFN()"
+					data-mode="javascript"
+					data-behaviours-enabled="true"
+					data-snippets-enabled="false"
+					data-max-lines="20" >
+				</code-editor>
+			</div>
+		</div>
+	</div>
+
+
 	<div class="gf-form-group" ng-if="ctrl.debugParams">
 		<h5 class="section-heading">Variables</h5>
 		<table class="filter-table" style="width:auto;">
